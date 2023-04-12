@@ -1,14 +1,14 @@
-const emailInput = document.getElementById('#email');
-const passwordInput = document.getElementById('#password');
-const loginForm = document.getElementById('#form-login');
-const errorMessageConnexion = document.getElementById('#error-message-connexion');
+// const emailInput = document.getElementById('email');
+// const passwordInput = document.getElementById('password');
+const loginForm = document.getElementById('form-login');
+const errorMessageConnexion = document.getElementById('error-message-connexion');
 
 function sendFormConnexion(e) {
   e.preventDefault();
   
   const emailValue = document.querySelector("#email").value;
   const passwordValue = document.querySelector('#password') .value;
-  console.log(passwordValue);
+ 
   
   const user = { 
     email: emailValue,
@@ -24,12 +24,12 @@ function sendFormConnexion(e) {
   })
     .then((response) => {
       if (response.ok === false ) {
-        errorMessageConnexion.textContent = 'Erreur d\'utilisateur ou de mot de passe, veuillez réessayer';
+        errorMessageConnexion.textContent = "Erreur d'utilisateur ou de mot de passe, veuillez réessayer";
       }
        else {
         response.json().then((data) => {
-          errorMessageConnexion.textContent = 'Connexion établie, redirection...';
-          errorMessageConnexion.style.color = 'green';
+          errorMessageConnexion.textContent = "Connexion établie, redirection...";
+          errorMessageConnexion.style.color = "green";
           
           const token = data.token;
           localStorage.setItem('token', token);
@@ -39,8 +39,8 @@ function sendFormConnexion(e) {
       }
     })
     .catch((err) => {
-      errorMessageConnexion.textContent = 'Erreur d\'API ou de connexion';
+      errorMessageConnexion.textContent = "Erreur d'API ou de connexion";
     });
 }
 
-loginForm.addEventListener('submit', sendFormConnexion);
+loginForm.addEventListener("submit", sendFormConnexion);

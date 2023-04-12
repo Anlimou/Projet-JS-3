@@ -1,9 +1,10 @@
-let contentgalery = document.querySelector('content-galery');
+let contentgalery = document.getElementById('content-galery');
+let modalgalery = document.getElementById ('gallerymodal');
 let getUrlWorks = 'http://localhost:5678/api/works';
-let btnFilterTous = document.querySelector('btn-tous');
-let btnFilterObjets = document.querySelector('btn-objets');
-let btnFilterAppart = document.querySelector('btn-appartements');
-let btnFilterHR = document.querySelector('btn-HR');
+let btnFilterTous = document.getElementById('btn-tous');
+let btnFilterObjets = document.getElementById('btn-objets');
+let btnFilterAppart = document.getElementById('btn-appartements');
+let btnFilterHR = document.getElementById('btn-HR');
 
 
 function getData(url, filter)
@@ -17,9 +18,10 @@ function getData(url, filter)
         if(filter == 'Tous')
         {
           data.map((elem) => {
-            // console.log(elem.title);
-             
+            // console.log(modalgalery);
+                modalgalery.innerHTML +='<figure> <img crossorigin="anonymous" class ="img-modalgaly" src=" '+ elem.imageUrl + '" alt="'+ elem.title +'"><figcaption>  editer </figcaption></figure>'; 
                 contentgalery.innerHTML +=' <figure> <img crossorigin="anonymous" src=" '+ elem.imageUrl + '" alt="'+ elem.title +'"><figcaption> ' + elem.title + '</figcaption></figure>';  
+                 
             })
         
         }
@@ -88,12 +90,5 @@ btnFilterHR.addEventListener('click', function()
 {
     let attribu = btnFilterHR.getAttribute('data-filtre');
     getData(getUrlWorks,attribu);
+
 })
-
-
-
-
-// contentgalery.textContent='textContent : passam <h1> MOI <h1>';
-// contentgalery.innerHTML +='<br> <h1> MOI <h1>';
-
-

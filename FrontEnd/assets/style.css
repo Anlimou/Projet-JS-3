@@ -87,6 +87,8 @@ h2{
 	font-size: 30px;
 	color: #1D6154
 }
+
+/* navigateur */
 nav ul {
 	display: flex;
 	align-items: center;
@@ -128,6 +130,206 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
+/* bonton pour le modal  */
+
+.modify-span {
+	font-size: 14px;
+	margin: 0 0 0 3%;
+	color: #3d3d3d;
+	border-radius: 60px;
+	padding: 5px 20px;
+}
+
+.modify-span:hover {
+transform: translateY(50%);
+transition: 0.2s;
+cursor: pointer;
+background: #1D6154;
+color: #f1f1f1;
+}
+
+.modify-span i {
+margin: 0 10px 0 0;
+}
+
+/* page du modal */
+/* #Modal {
+	display: none ;
+	position: absolute;
+	width: 630px;
+	min-height: 731px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 10px;
+	background: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1% 0;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	border-radius: 10px;
+	z-index: 100;
+}
+
+#gallerymodal figure .img-modalgaly{
+	width: 58px !important;
+	height: auto;
+
+}*/
+
+#Ajout-projet,.back-modal{
+	display: none ;
+} 
+
+
+/* #gallerymodal{
+	display: flex;
+	flex-direction: column;
+
+} */
+#Modal {
+	display: none ;
+	position: absolute;
+	width: 630px;
+	min-height: 731px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 10px;
+	background: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1% 0;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	border-radius: 10px;
+	z-index: 100;
+}
+
+/* .nav-bar-modal{
+
+} */
+
+.close-motal  {
+    width: 30px;
+	cursor: pointer;
+    border: none;
+    background: none;
+
+}
+
+.back-modal  {
+    width: 30px;
+	cursor: pointer;
+    border: none;
+    background: none; 
+}
+
+.gallery-modal {
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+
+}
+ 
+#gallerymodal figure  
+.img-modalgaly{
+    width: 78.12px;
+    height: 104.08px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* .Ajout-projet,.back-modal{
+	display: none; 
+} */
+
+#btn-ajout {
+    background: #1d6154;
+    color: #f1f1f1;
+    border-radius: 60px;
+    cursor: pointer;
+    border: 2px solid #1d6154;
+    width: 180px;
+    height: 34px;
+}
+
+/* parti ajour ptojet */
+
+
+
+#formAjout{
+
+    padding: 50px 108px;
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.titre-ajout{
+
+    width: 379px;
+    height: 38px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+    background: #ffffff;
+}
+
+
+.categ-ajout{
+
+    width: 379px;
+    height: 38px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+    background: #ffffff;
+}
+
+.div-import-picture{
+
+	background: #e8f1f7;
+    border-radius: 3px;
+    width: 60%;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+    margin: 0px 111px;
+
+}
+
+#valider{
+
+    background: #1d6154;
+    color: #f1f1f1;
+    border-radius: 60px;
+    cursor: pointer;
+    border: 2px solid #1d6154;
+    width: 180px;
+    height: 34px;
+
+}
+
+
+.nav-bar-modal{
+	width: 92%;
+    display: flex;
+    margin: 15px 0;
+    position: relative;
+    height: 40px;
+    margin-left: 90%;
+}
+
+/* debut du filtre */
+
 #content-boutton-filtre{
 	display: flex;
     justify-content: center;

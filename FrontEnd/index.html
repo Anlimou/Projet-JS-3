@@ -8,7 +8,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
+	<!-- <link rel="stylesheet" href="./assets/modalstyle.css"> -->
 	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <header>
@@ -35,7 +37,124 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
+		<h2>Mes Projets 
+			<span id="Mybtn" class="modify-span display-none"
+            ><i class="fa-regular fa-pen-to-square"></i>modifier
+          </span>
+		</h2>
+
+		<div id="Modal" style="display: none;">
+			<!-- nav-bardu modal -->
+			<div class="nav-bar-modal">
+			<button class="back-modal ">
+			 <i class="fa-solid fa-arrow-left "></i>	
+			</button>
+			<button class="close-motal">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+			</div>
+			<div id="ctn-modalgalary">
+				<h2 id="Modal-titre">Galerie photo</h2>
+				<div class="gallery-modal" id="gallerymodal"></div>
+	
+				<hr style="
+					background: #000000;
+					width: 70%;
+					height: 0.2px;
+					margin: 43px 77px;"/>
+	
+				<button id="btn-ajout"
+				style="background: #1d6154;
+				color: #f1f1f1;
+				border-radius: 60px;
+				cursor: pointer;
+				border: 2px solid #1d6154;
+				width: 185px;
+				height: 38px;
+				margin: 0px 215px;">Ajouter une photo</button>
+				<h3 class="h3-supprime-gallery" 
+				style=" 
+				margin: 20px 231px;
+				color: red;
+				cursor: pointer;">Supprimer la galerie</h3>
+			</div>
+
+			<div id="Ajout-projet">
+				<h2>Ajout un projet</h2>
+
+					<div class="div-import-picture"
+						style="
+						background: #e8f1f7;
+						border-radius: 3px;
+						width: 60%;
+						height: 170px;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: space-around;
+						overflow: hidden;
+						position: relative;
+						margin: 0px 111px;">
+						<img
+						  class="image-from-input"
+						  src="./assets/icons/image-regular.svg"
+						  alt="chosen-picture" style="height: 30%;"
+						/>
+		
+						<button id="btn-label">
+						  <label for="image-postform" class="label-in-button">
+							+ Ajouter Photo
+						  </label>
+						  <input
+							type="file"
+							value="Ajouter photo"
+							name="image-postform"
+							id="image-postform"
+							class="display-none"
+							required
+						  />
+						</button>
+		
+						<p>jpg, png : 4mo max</p>
+	                </div>
+				<form action="" id="formAjout">
+				<label  for="name">Titre</label>
+			    <input class="titre-ajout"type="text" name="name" id="name"> 
+
+				<label for="pet-select"    style="margin-top: 25px;" >Catégorie</label>
+
+				<select class="categ-ajout" name="pets" id="pet-select">
+					<option value="dog">Objets</option>
+					<option value="cat">Appartements</option>
+					<option value="hamster">Hôtels & restaurants</option>
+				</select>
+				</form>
+
+				<hr style="
+				background: #000000;
+				width: 61%;
+				height: 0.2px;
+				margin: 43px 109px;"/>"/>
+
+				<button id="valider" style="
+					background: #1d6154;
+					color: #f1f1f1;
+					border-radius: 60px;
+					cursor: pointer;
+					border: 2px solid #1d6154;
+					width: 180px;
+					height: 34px;
+					margin: 26px;
+					margin-left: 167px;
+					margin-bottom: 50px;">
+					Valider
+				</button>
+
+
+			</div>
+
+		</div>
+		
 		<!-- content boutton filtre-->
 		<div id="content-boutton-filtre"> 
 			<button id='btn-tous' data-filtre ='Tous' class="btn-filtre">Tous </button>
@@ -45,50 +164,7 @@
 		</div>
 		<!-- contente galery -->
 		<div class="gallery" id="content-galery">
-			<!-- <figure>
-				<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina">
-				<figcaption>Abajour Tahina</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-v.png" alt="Appartement Paris V">
-				<figcaption>Appartement Paris V</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/restaurant-sushisen-londres.png" alt="Restaurant Sushisen - Londres">
-				<figcaption>Restaurant Sushisen - Londres</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/la-balisiere.png" alt="Villa “La Balisiere” - Port Louis">
-				<figcaption>Villa “La Balisiere” - Port Louis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/structures-thermopolis.png" alt="Structures Thermopolis">
-				<figcaption>Structures Thermopolis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-x.png" alt="Appartement Paris X">
-				<figcaption>Appartement Paris X</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/le-coteau-cassis.png" alt="Pavillon “Le coteau” - Cassis">
-				<figcaption>Pavillon “Le coteau” - Cassis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/villa-ferneze.png" alt="Villa Ferneze - Isola d’Elba">
-				<figcaption>Villa Ferneze - Isola d’Elba</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-xviii.png" alt="Appartement Paris XVIII">
-				<figcaption>Appartement Paris XVIII</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/bar-lullaby-paris.png" alt="Bar “Lullaby” - Paris">
-				<figcaption>Bar “Lullaby” - Paris</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/hotel-first-arte-new-delhi.png" alt="Hotel First Arte - New Delhi">
-				<figcaption>Hotel First Arte - New Delhi</figcaption>
-			</figure> -->
+		
 		</div>
 	</section>
 	<section id="contact">
@@ -115,4 +191,5 @@
 </footer>
 </body>
 <script src="./script.js"></script>
+<script src="./modal.js"></script>
 </html>
