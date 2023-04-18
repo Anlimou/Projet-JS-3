@@ -19,7 +19,7 @@ function getData(url, filter)
         {
           data.map((elem) => {
             // console.log(modalgalery);
-                modalgalery.innerHTML +='<figure> <img crossorigin="anonymous" class ="img-modalgaly" src=" '+ elem.imageUrl + '" alt="'+ elem.title +'"><figcaption>  editer </figcaption><button class="btn-delete"><i class="fa-solid fa-trash-can"></i></button></figure>'; 
+                modalgalery.innerHTML +='<figure><button class="btn-delete"><i class="fa-solid fa-trash-can"></i></button> <img crossorigin="anonymous" class ="img-modalgaly" src=" '+ elem.imageUrl + '" alt="'+ elem.title +'"><figcaption>  editer </figcaption></figure>'; 
                 contentgalery.innerHTML +=' <figure> <img crossorigin="anonymous" src=" '+ elem.imageUrl + '" alt="'+ elem.title +'"><figcaption> ' + elem.title + '</figcaption></figure>';  
                  
             })

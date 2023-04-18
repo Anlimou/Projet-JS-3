@@ -6,6 +6,7 @@ let ctnModaleGalery = document.getElementById("ctn-modalgalary");
 let ctnAjoutProjet = document.getElementById("Ajout-projet");
 
 
+
 openModalBtn.addEventListener("click",function(){
   modal.style.display =" block" 
 });
@@ -36,30 +37,3 @@ btnRetour.addEventListener("click", function() {
 
 
 
-
-
-
-
-// closeModalBtn.addEventListener("click",function(){
-//   modal.style.display =" none" 
-// })
-
-// closeModalBtn.addEventListener("click", function() {
-//     modal.style.display = "none !important";
-//   });
-  
-// window.addEventListener("click", function(event) {
-// if (event.target == modal) {
-//       modal.style.display = "none !important";
-// }
-// });
-
-
-
-
-// let Mymodal = document.getElementById("myModal");
-// let btnopenModal =document.getElementById("Mybtn");
-
-// btn.onclick = function() {
-//     Mymodal.style.display = "block;
-// }
