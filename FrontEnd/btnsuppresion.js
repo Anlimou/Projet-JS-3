@@ -1,20 +1,39 @@
-let BtnDelete = document.querySelectorAll('.btn-delete');
+// demande le code se excuter apres le charement de la page
+window.addEventListener('load', (event) => {
+  // demande a l'ordi de recuppere le btn 
+  let BtnDelete = document.querySelectorAll('.btn-delete');
+  // avac forEach je lui dis je selectionné le bouton soie btn0 btn1...
+  
+    BtnDelete.forEach((btn,index)=>{
+      btn.addEventListener('click', ()=>{
+      let Id= btn.getAttribute('data-id');
+      deleteData('',Id);
+
+      console.log(btn.getAttribute('data-id'))  
+
+      });
+      
+
+    })
+    
+    
+ 
+});
+
+
+
 // BtnDelete[0].addEventListener('click',() =>{
 //  console.log(BtnDelete[0].innerHTML)
 // })
 
-BtnDelete.forEach((btn,index)=>{
-  btn[index].addEventListener('click', ()=>{
-  console.log(index)  
-  })
 
-})
+
   function deleteData(modalCardDel, indexCardDel) {
-    fetch(`http://localhost:3000/api/mydata/${indexCardDel}`, {
+    fetch(`http://localhost:5678/api/works/${indexCardDel}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
-        authorization: `Bearer ${token}`,
+        authorization: `Bearer b`,
       },
     })
       .then((response) => {
@@ -48,7 +67,7 @@ BtnDelete.forEach((btn,index)=>{
 
 
 
-// // document.addEventListener('click', (e) => {
+// // // document.addEventListener('click', (e) => {
 // //   if(e.target.className === "btn-delete") {
 // //       console.log("OUI")
 //       // let ctnModaleGalery = e.target.parentElement;
