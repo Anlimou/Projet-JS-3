@@ -7,6 +7,7 @@ let btnFilterAppart = document.getElementById('btn-appartements');
 let btnFilterHR = document.getElementById('btn-HR');
 
 
+
 function getData(url, filter)
 {
    fetch(url)
@@ -92,3 +93,4 @@ btnFilterHR.addEventListener('click', function()
     getData(getUrlWorks,attribu);
 
 })
+
