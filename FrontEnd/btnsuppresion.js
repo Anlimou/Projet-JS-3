@@ -8,24 +8,18 @@ window.addEventListener('load', (event) => {
       btn.addEventListener('click', ()=>{
       let Id= btn.getAttribute('data-id');
       deleteData('',Id);
-
+      
       console.log(btn.getAttribute('data-id'))  
 
       });
       
 
     })
+    // let token=document.
     
     
  
 });
-
-
-
-// BtnDelete[0].addEventListener('click',() =>{
-//  console.log(BtnDelete[0].innerHTML)
-// })
-
 
 
   function deleteData(modalCardDel, indexCardDel) {
@@ -33,7 +27,7 @@ window.addEventListener('load', (event) => {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
-        authorization: `Bearer b`,
+        authorization: `Bearer ${token}`,
       },
     })
       .then((response) => {
