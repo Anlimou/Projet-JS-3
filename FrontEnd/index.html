@@ -12,7 +12,7 @@
     />
     <meta name="description" content="" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <script
       src="https://kit.fontawesome.com/4f7e433c09.js"
       crossorigin="anonymous"
@@ -20,16 +20,16 @@
   </head>
 
   <body>
-    <nav id="nav-admin" class="display-none">
+    <nav id="bar-nav" class="cash-elem">
       <button id="btn-edit">
         <i class="fa-regular fa-pen-to-square"></i>Mode édtion
       </button>
-      <button id="btn-publish-changes">
+      <button id="btn-publication">
         <a href="./index.html">publier les changements</a>
       </button>
     </nav>
 
-    <div class="div-hidden-body display-none"></div>
+    <div class="div-hidden-body cash-elem"></div>
 
     <header>
       <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
@@ -94,14 +94,14 @@
       <section id="portfolio">
         <h2>
           Mes Projets
-          <span class="modify-span display-none"
+          <span class="modify-span cash-elem"
             ><i class="fa-regular fa-pen-to-square"></i>Modifier
           </span>
         </h2>
 
         <div id="modal">
           <div class="div-header-modal-btns">
-            <button class="btn-back-modal display-none">
+            <button class="btn-back-modal cash-elem">
               <i class="fa-solid fa-arrow-left"></i>
             </button>
             <button class="btn-close-modal">
@@ -119,7 +119,7 @@
             <h3 class="h3-erase-gallery">Supprimer la galerie</h3>
           </div>
 
-          <div class="div-inside-modal-post display-none">
+          <div class="div-inside-modal-post cash-elem">
             <h2>Ajout photo</h2>
 
             <form class="form-add-project">
@@ -139,7 +139,7 @@
                     value="Ajouter photo"
                     name="image-postform"
                     id="image-postform"
-                    class="display-none"
+                    class="cash-elem"
                     required
                   />
                 </button>
@@ -206,9 +206,9 @@
       </nav>
     </footer>
 
-    <script src="./jwt-decode.js"></script>
-    <script src="./main.js"></script>
-    <script src="./postRequest.js"></script>
-    <script src="./deleteRequest.js"></script>
+     <script src="./jwt-decode.js"></script>
+      <script src="./script.js"></script>
+      <script src="./Btn-valide.js"></script>
+      <script src="./Btn-delete.js"></script>
   </body>
 </html>
