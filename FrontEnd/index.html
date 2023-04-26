@@ -12,7 +12,7 @@
     />
     <meta name="description" content="" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
     <script
       src="https://kit.fontawesome.com/4f7e433c09.js"
       crossorigin="anonymous"
@@ -20,16 +20,16 @@
   </head>
 
   <body>
-    <nav id="bar-nav" class="cash-elem">
+    <nav id="nav-admin" class="display-none">
       <button id="btn-edit">
         <i class="fa-regular fa-pen-to-square"></i>Mode édtion
       </button>
-      <button id="btn-publication">
+      <button id="btn-publish-changes">
         <a href="./index.html">publier les changements</a>
       </button>
     </nav>
 
-    <div class="div-hidden-body cash-elem"></div>
+    <div class="div-hidden-body display-none"></div>
 
     <header>
       <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
@@ -94,17 +94,17 @@
       <section id="portfolio">
         <h2>
           Mes Projets
-          <span class="modify-span cash-elem"
+          <span class="modify-span display-none"
             ><i class="fa-regular fa-pen-to-square"></i>Modifier
           </span>
         </h2>
 
         <div id="modal">
-          <div class="div-header-modal-btns">
-            <button class="btn-back-modal cash-elem">
+          <div class="btns-modal">
+            <button class="btn-back-modal display-none">
               <i class="fa-solid fa-arrow-left"></i>
             </button>
-            <button class="btn-close-modal">
+            <button class="btn-close">
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
@@ -115,15 +115,15 @@
 
             <hr />
 
-            <button class="btn-to-postdata">Ajouter une photo</button>
+            <button class="btn-post-data">Ajouter une photo</button>
             <h3 class="h3-erase-gallery">Supprimer la galerie</h3>
           </div>
 
-          <div class="div-inside-modal-post cash-elem">
+          <div class="div-inside-modal-post display-none">
             <h2>Ajout photo</h2>
 
-            <form class="form-add-project">
-              <div class="div-add-a-picture">
+            <form class="form-ajout-project">
+              <div class="Affichage-picture">
                 <img
                   class="image-from-input"
                   src="./assets/icons/image-regular.svg"
@@ -139,7 +139,7 @@
                     value="Ajouter photo"
                     name="image-postform"
                     id="image-postform"
-                    class="cash-elem"
+                    class="display-none"
                     required
                   />
                 </button>
@@ -158,9 +158,9 @@
 
               <label for="category-postform">Catégorie</label>
 
-              <div class="div-select">
+              <div class="select-categ">
                 <select name="category" id="category-postform"></select>
-                <div class="icon-select-arrow">
+                <div class="icon-select">
                   <img src="./assets/icons/arrow-down.svg" alt="" />
                 </div>
               </div>
@@ -178,7 +178,7 @@
           </div>
         </div>
 
-        <div class="div-search"></div>
+        <div class="Recherche"></div>
 
         <div class="gallery"></div>
       </section>
@@ -206,9 +206,9 @@
       </nav>
     </footer>
 
-     <script src="./jwt-decode.js"></script>
+      <script src="./jwt-decode.js"></script>
       <script src="./script.js"></script>
       <script src="./Btn-valide.js"></script>
       <script src="./Btn-delete.js"></script>
-  </body>
+   </body>
 </html>
