@@ -17,6 +17,7 @@ audio,video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -72,6 +73,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 #btn-edit,
