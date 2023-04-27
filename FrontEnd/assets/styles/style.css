@@ -60,7 +60,7 @@ body {
 
 
 
-#bar-nav {
+#nav-admin {
 
   position: absolute;
   left: 0;
@@ -74,8 +74,8 @@ body {
   align-items: center;
 }
 
-#btn-mode-edite,
-#btn-publier {
+#btn-edit,
+#btn-publish-changes {
   border-radius: 25px;
   padding: 8px 30px;
   background: #ffffff;
@@ -84,26 +84,27 @@ body {
   border: none;
 }
 
-#btn-mode-edite {
+#btn-edit {
   background: #000;
   color: #FFFFFF;
   cursor: pointer;
 }
 
-#btn-mode-edite:hover {
+#btn-edit:hover {
   transition: 0.25s;
   transform: translateX(-25%);
 }
 
-#btn-mode-edite i {
+#btn-edit i {
   margin: 0 10px 0 0;
 }
 
-#btn-publier {
+#btn-publish-changes {
   font-weight: 800px;
   background: #FFFFFF;
+  text-decoration: none;
 }
-#btn-publier:hover {
+#btn-publish-changes:hover {
   cursor: pointer;
   scale: 1.05;
   transition: 0.2s;
