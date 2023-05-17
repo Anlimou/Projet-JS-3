@@ -1,15 +1,28 @@
-// Ecoute l'événement de clic sur l'élément "modalGallery"
+// // Ecoute l'événement de clic sur l'élément "modalGallery"
+// modalGallery.addEventListener('click', (e) => {
+//   // Affiche l'élément sur lequel l'utilisateur a cliqué
+//   if(e.target.className === "btn-delete") {
+//      // Récupère l'index de la carte à supprimer
+//   console.log(e.target.parentElement.getAttribute('index'));
+//   let indexCard = parseInt(e.target.parentElement.getAttribute('index'));
+//   let modalCard = e.target.parentElement;
+//   // Appelle la fonction "deleteData" avec l'élément de la carte à supprimer et son index
+//   deleteData(modalCard, indexCard)
+//   }
+// });
+
 modalGallery.addEventListener('click', (e) => {
-  // Affiche l'élément sur lequel l'utilisateur a cliqué
-  if(e.target.className === "btn-delete") {
-     // Récupère l'index de la carte à supprimer
-  console.log(e.target.parentElement.getAttribute('index'));
-  let indexCard = parseInt(e.target.parentElement.getAttribute('index'));
-  let modalCard = e.target.parentElement;
-  // Appelle la fonction "deleteData" avec l'élément de la carte à supprimer et son index
-  deleteData(modalCard, indexCard)
+  if (e.target.className === "btn-delete") {
+    const confirmDelete = confirm("Voulez-vous vraiment supprimer cet élément ?");
+    if (confirmDelete) {
+      console.log(e.target.parentElement.getAttribute('index'));
+      let indexCard = parseInt(e.target.parentElement.getAttribute('index'));
+      let modalCard = e.target.parentElement;
+      deleteData(modalCard, indexCard);
+    }
   }
 });
+
 
 // Fonction qui supprime les données de la carte sélectionnée
 
@@ -32,7 +45,7 @@ function deleteData(modalCardDel, indexCardDel) {
         );
         
       } else {
-        console.log("requête supprimé effectuée");
+        
         modalCardDel.remove();
         // Parcourt toutes les figures du portfolio pour supprimer la carte correspondante
         figurePortfolio.forEach((elem) => {

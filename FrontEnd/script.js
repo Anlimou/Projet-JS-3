@@ -35,9 +35,6 @@ function appelApi1() {
 }
 
 function createCards(values) {
-  //ancien code, une solution potentiel est aussi de refaire un appel API
-  // pour créer les cards , en supprimant l'ancien HTML (pour ne pas recréer toutes les cartes)
-  // gallery.innerHTML = "";
   values.map((val) => {
     let galleryCard = document.createElement("figure");
     galleryCard.setAttribute("index", val.id);
